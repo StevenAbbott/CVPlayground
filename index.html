@@ -8,20 +8,81 @@
         <!--<p>Know 'em both, same guy.</p>
         <button id="ownerToggle">"Who's page?"</button>-->
         <div id="doc">
+            <h3>
+                Below are several examples of several common computer vision 
+                'filters' or algorithms:
+            </h3>
             <p>
-                Below is an example of Canny edge detection. Canny edge
-                detection is used to find the edges and images and is used
-                for segmenting things and finding corners of surfaces. Notice
-                how clearly it makes features like doorways and table edges 
-                stand out.
+                <b>- Canny edge detection</b> is used to find the edges 
+                and images and is used for segmenting things and finding 
+                corners of surfaces. Notice how clearly it makes features 
+                like doorways and table edges stand out.
+            </p>
+            <p>
+                <b>- Adaptive Gaussian Thresholding</b> is used to evenly 
+                blend out lighting
+                in an image. Its a bit hard to tell because you are seeing
+                it applied to a grey version of the origional image, but notice
+                how it highlights more shadowy parts of the image.
+            </p>
+            <p>
+                <b>- Background Subtraction</b> is used to detect motion in a 
+                video.
+                Frames of the video are -more or less- subtracted from
+                eachother in pairs of two or sometimes more (to detect longer
+                trends in motion and improve accurace). All that remains
+                is the differences between the two frames ie. wherever there
+                was motion.
             </p>
         </div>
-        <div>
-            <div class="container">
-                <video autoplay="true" id="videoElement"></video>
+        <div id="content">
+            <div>
+                <ul>
+                    <li>
+                        <div class="label">
+                            <h3>
+                                Original
+                            </h3>
+                            <div class="container">
+                                <video autoplay="true" id="videoElement"></video>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="container">
-                <canvas id="outPut"></canvas>
+            <div class="displayRow">
+                <ul>
+                    <li>
+                        <div class=label id="canny">
+                            <h3>
+                                Canny
+                            </h3>
+                            <div class="container">
+                                <canvas class="outPut" id="outPut0"></canvas>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class=label id="canny">
+                            <h3>
+                                Adaptive Gaussian Threshold
+                            </h3>
+                            <div class="container">
+                                <canvas class="outPut" id="outPut1"></canvas>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class=label id="canny">
+                            <h3>
+                                Background Subtraction
+                            </h3>
+                            <div class="container">
+                                <canvas class="outPut" id="outPut2"></canvas>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <link rel="stylesheet" type="text/css" href="style.css">
