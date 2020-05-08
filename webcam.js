@@ -30,7 +30,7 @@ if (navigator.mediaDevices.getUserMedia) {
             canvas.getContext('2d').drawImage(video, 0, 0, width, height);
             try {
               processFrame(canvas);
-            } catch {
+            } catch (err) {
               console.log("An error occurred!");
               location.reload();
             }
@@ -38,6 +38,7 @@ if (navigator.mediaDevices.getUserMedia) {
       }
     })
     .catch(function (err0r) {
+      console.log("error: " + err0r);
       console.log("Something went wrong!");
     });
 }
